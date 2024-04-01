@@ -1,8 +1,15 @@
 import tkinter as tk
+import sys
+import os
+current_dir = os.path.dirname(os.path.realpath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir)
+
+from backend.api import process_user_input
 
 def submit_chat():
     user_input = entry.get()
-    print(user_input) 
+    process_user_input(user_input) 
     entry.delete(0, tk.END)
 
 root = tk.Tk()
