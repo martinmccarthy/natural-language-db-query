@@ -17,3 +17,7 @@ Export API key as environment variable:
 Run backend:
 
 `uvicorn main:app --reload`
+
+Hit endpoint:
+
+`curl localhost:8000/`
