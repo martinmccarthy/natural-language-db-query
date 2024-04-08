@@ -3,8 +3,8 @@ from faker import Faker
 
 fake = Faker('en_US')
 
-# Connect to your SQLite database
-conn = sqlite3.connect('company_data.db')  # Change 'mydatabase.db' to your database file
+# Connect to the SQLite database
+conn = sqlite3.connect('company_data.db')
 c = conn.cursor()
 
 c.execute('DELETE FROM Customer_Data')
